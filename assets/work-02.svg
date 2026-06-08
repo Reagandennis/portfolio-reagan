@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480">
+  <rect width="640" height="480" fill="#E5DFD1"/>
+  <g stroke="#181512" stroke-width="1" stroke-opacity="0.18">
+    <path d="M0 120 H640 M0 240 H640 M0 360 H640 M160 0 V480 M320 0 V480 M480 0 V480"/>
+  </g>
+  <!-- bowl -->
+  <path d="M200 230 a120 120 0 0 0 240 0 Z" fill="#181512"/>
+  <ellipse cx="320" cy="230" rx="120" ry="26" fill="#181512"/>
+  <ellipse cx="320" cy="228" rx="120" ry="22" fill="#E5DFD1"/>
+  <!-- spark -->
+  <g fill="#E5481F">
+    <path d="M320 120 l10 34 34 10 -34 10 -10 34 -10 -34 -34 -10 34 -10 z"/>
+  </g>
+  <text x="40" y="440" font-family="'JetBrains Mono', monospace" font-size="20" letter-spacing="3" fill="#181512">PANTRY / AI COOKING</text>
+</svg>

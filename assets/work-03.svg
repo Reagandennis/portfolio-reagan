@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480">
+  <rect width="640" height="480" fill="#E5481F"/>
+  <!-- bars -->
+  <g fill="#181512">
+    <rect x="80"  y="280" width="60" height="120"/>
+    <rect x="170" y="220" width="60" height="180"/>
+    <rect x="260" y="150" width="60" height="250"/>
+    <rect x="350" y="240" width="60" height="160"/>
+    <rect x="440" y="120" width="60" height="280"/>
+  </g>
+  <!-- trend line -->
+  <polyline points="110,300 200,250 290,180 380,250 470,150 530,110" fill="none" stroke="#ECE6DA" stroke-width="4"/>
+  <g fill="#ECE6DA">
+    <circle cx="110" cy="300" r="6"/><circle cx="290" cy="180" r="6"/><circle cx="530" cy="110" r="6"/>
+  </g>
+  <text x="40" y="440" font-family="'JetBrains Mono', monospace" font-size="20" letter-spacing="3" fill="#ECE6DA">PULSE / ANALYTICS</text>
+</svg>

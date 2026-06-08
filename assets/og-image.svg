@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#ECE6DA"/>
+  <g stroke="#181512" stroke-opacity="0.12" stroke-width="1">
+    <path d="M0 90 H1200 M0 540 H1200"/>
+  </g>
+  <text x="80" y="80" font-family="'JetBrains Mono', monospace" font-size="22" letter-spacing="6" fill="#181512">SOFTWARE ENGINEER — REMOTE — EST. 2019</text>
+  <text x="72" y="330" font-family="Fraunces, Georgia, serif" font-size="150" fill="#181512">Renoch<tspan fill="#E5481F">.</tspan></text>
+  <text x="80" y="430" font-family="Fraunces, Georgia, serif" font-style="italic" font-size="58" fill="#181512">Fast, thoughtful software for the web.</text>
+  <text x="80" y="580" font-family="'JetBrains Mono', monospace" font-size="22" letter-spacing="2" fill="#181512" opacity="0.65">renoch@ladyaskari.com</text>
+</svg>

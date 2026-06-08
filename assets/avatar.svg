@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 540" width="440" height="540" role="img" aria-label="Editorial portrait placeholder">
+  <defs>
+    <pattern id="halftone" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(20)">
+      <circle cx="2" cy="2" r="1.4" fill="#181512" opacity="0.16"/>
+    </pattern>
+  </defs>
+
+  <rect width="440" height="540" fill="#E5DFD1"/>
+
+  <!-- profile silhouette, bust -->
+  <g fill="#181512">
+    <path d="M150 540
+             C150 430 150 410 150 386
+             C120 372 104 338 104 296
+             C104 300 100 300 98 286
+             C92 258 104 250 112 256
+             C112 220 128 168 188 158
+             C238 150 286 178 296 232
+             C300 256 298 286 292 312
+             C286 342 270 366 246 380
+             C246 404 248 430 256 458
+             C266 494 290 516 326 528
+             C356 538 380 540 380 540 Z"/>
+  </g>
+
+  <!-- halftone texture over silhouette -->
+  <path d="M150 540 C150 430 150 410 150 386 C120 372 104 338 104 296 C104 300 100 300 98 286 C92 258 104 250 112 256 C112 220 128 168 188 158 C238 150 286 178 296 232 C300 256 298 286 292 312 C286 342 270 366 246 380 C246 404 248 430 256 458 C266 494 290 516 326 528 C356 538 380 540 380 540 Z" fill="url(#halftone)" opacity="0.5"/>
+
+  <!-- accent detail -->
+  <rect x="300" y="120" width="64" height="64" fill="#E5481F"/>
+  <circle cx="332" cy="152" r="20" fill="#E5DFD1"/>
+
+  <!-- caption -->
+  <text x="24" y="512" font-family="'JetBrains Mono', monospace" font-size="13" letter-spacing="2" fill="#181512" opacity="0.55">REPLACE WITH A PHOTO</text>
+</svg>

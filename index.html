@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✏️ EDIT: SEO / social preview -->
+  <title>Reagan Enoch Owiti — Software Engineer</title>
+  <meta name="description" content="Reagan is a software engineer building fast, thoughtful software for the web — with the polish of good design." />
+  <meta name="author" content="Reagan Enoch Owiti" />
+  <meta name="theme-color" content="#ECE6DA" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Reagan Enoch Owiti — Software Engineer" />
+  <meta property="og:description" content="Fast, thoughtful software for the web — with the polish of good design." />
+  <meta property="og:image" content="assets/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Set theme before paint to avoid flash
+    (function () {
+      try {
+        var t = localStorage.getItem("theme") ||
+          (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) { document.documentElement.setAttribute("data-theme", "light"); }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#work">Skip to content</a>
+
+  <!-- Paper grain + custom cursor -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="topbar" id="top">
+    <a href="#top" class="wordmark" data-cursor>Reagan Enoch Owiti<span class="wordmark__dot">.</span></a>
+
+    <nav class="topnav" aria-label="Primary">
+      <a href="#work" data-cursor><i>01</i> Work</a>
+      <a href="#about" data-cursor><i>02</i> About</a>
+      <a href="#stack" data-cursor><i>03</i> Stack</a>
+      <a href="#contact" data-cursor><i>04</i> Contact</a>
+    </nav>
+
+    <div class="topbar__right">
+      <span class="avail"><span class="avail__dot"></span>Available</span>
+      <button class="theme" id="themeToggle" type="button" aria-label="Toggle theme" data-cursor>
+        <span class="theme__t">Dark</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <p class="hero__eyebrow"><span>Software Engineer</span><span class="dim">Remote · Worldwide</span><span class="dim">Est. 2019</span></p>
+
+      <!-- ✏️ EDIT: your headline statement -->
+      <h1 class="hero__title">
+        <span class="line"><span>I build fast,</span></span>
+        <span class="line"><span><em>thoughtful</em> software</span></span>
+        <span class="line"><span>for the web.</span></span>
+      </h1>
+
+      <div class="hero__foot">
+        <p class="hero__lead">
+          Full-stack engineer who sweats the details most people skip —
+          performance, interaction, and the last 10% of polish that makes
+          software feel handcrafted.
+        </p>
+        <div class="hero__actions">
+          <a href="#work" class="link-btn" data-cursor>Selected work <span class="arr">↘</span></a>
+          <a href="#contact" class="link-btn link-btn--ghost" data-cursor>Get in touch <span class="arr">↗</span></a>
+        </div>
+      </div>
+
+      <span class="hero__index">(01—04)</span>
+    </section>
+
+    <!-- ===================== MARQUEE ===================== -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>Frontend Engineering</span><b>✶</b><span>Design Systems</span><b>✶</b>
+        <span>Web Performance</span><b>✶</b><span>Interaction Design</span><b>✶</b>
+        <span>APIs &amp; Infrastructure</span><b>✶</b><span>Accessibility</span><b>✶</b>
+        <span>Frontend Engineering</span><b>✶</b><span>Design Systems</span><b>✶</b>
+        <span>Web Performance</span><b>✶</b><span>Interaction Design</span><b>✶</b>
+        <span>APIs &amp; Infrastructure</span><b>✶</b><span>Accessibility</span><b>✶</b>
+      </div>
+    </div>
+
+    <!-- ===================== WORK ===================== -->
+    <section class="section" id="work">
+      <header class="sec-head">
+        <span class="sec-label">02 — Selected Work</span>
+        <h2 class="sec-title">A few things<br />I've shipped</h2>
+      </header>
+
+      <!-- ✏️ EDIT: your projects. data-cover points at the hover image. -->
+      <ul class="works">
+        <li class="work" data-cover="assets/work-01.svg">
+          <a href="#" class="work__row" data-cursor="View">
+            <span class="work__no">01</span>
+            <span class="work__title">Nimbus</span>
+            <span class="work__desc">Real-time collaboration canvas</span>
+            <span class="work__meta">2024 · TS · WebSockets · CRDTs</span>
+            <span class="work__arrow">↗</span>
+          </a>
+        </li>
+        <li class="work" data-cover="assets/work-02.svg">
+          <a href="#" class="work__row" data-cursor="View">
+            <span class="work__no">02</span>
+            <span class="work__title">Pantry</span>
+            <span class="work__desc">AI cooking companion</span>
+            <span class="work__meta">2024 · Next.js · OpenAI · Postgres</span>
+            <span class="work__arrow">↗</span>
+          </a>
+        </li>
+        <li class="work" data-cover="assets/work-03.svg">
+          <a href="#" class="work__row" data-cursor="View">
+            <span class="work__no">03</span>
+            <span class="work__title">Pulse</span>
+            <span class="work__desc">Developer analytics at scale</span>
+            <span class="work__meta">2023 · Go · ClickHouse · Grafana</span>
+            <span class="work__arrow">↗</span>
+          </a>
+        </li>
+        <li class="work" data-cover="assets/work-04.svg">
+          <a href="#" class="work__row" data-cursor="View">
+            <span class="work__no">04</span>
+            <span class="work__title">Sprout</span>
+            <span class="work__desc">Habit tracker · 60k+ users</span>
+            <span class="work__meta">2023 · React Native · Supabase</span>
+            <span class="work__arrow">↗</span>
+          </a>
+        </li>
+      </ul>
+      <!-- cursor-following preview -->
+      <div class="work-preview" aria-hidden="true"><img alt="" /></div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section about" id="about">
+      <header class="sec-head">
+        <span class="sec-label">03 — About</span>
+      </header>
+
+      <div class="about__grid">
+        <div class="about__lead">
+          <!-- ✏️ EDIT: your statement + bio -->
+          <p class="about__statement">
+            I've spent six years turning fuzzy ideas into products
+            people <em>actually rely on</em>.
+          </p>
+          <div class="about__body">
+            <p>
+              I work end-to-end — shaping the idea, designing the experience,
+              and shipping the code. My background sits at the seam between
+              engineering and design, so I care as much about a clean type
+              scale as I do a clean database schema.
+            </p>
+            <p>
+              Lately I'm focused on interface performance, design systems, and
+              the small interaction details that make a product feel considered.
+            </p>
+          </div>
+          <ul class="figures">
+            <li><span class="figures__n">06</span><span class="figures__l">Years building</span></li>
+            <li><span class="figures__n">12</span><span class="figures__l">Projects shipped</span></li>
+            <li><span class="figures__n">6</span><span class="figures__l">Open-source repos</span></li>
+          </ul>
+        </div>
+
+        <figure class="portrait">
+          <!-- ✏️ EDIT: drop a real photo into assets/ and point src here -->
+          <img src="assets/avatar.svg" alt="Portrait of Renoch" width="440" height="540" />
+          <figcaption>Renoch — somewhere remote</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== STACK ===================== -->
+    <section class="section stack" id="stack">
+      <header class="sec-head">
+        <span class="sec-label">04 — Capabilities</span>
+        <h2 class="sec-title">The toolkit</h2>
+      </header>
+
+      <!-- ✏️ EDIT: your stack -->
+      <div class="stack__grid">
+        <div class="stack__col">
+          <h3>Engineering</h3>
+          <ul>
+            <li>TypeScript</li><li>Go</li><li>Python</li>
+            <li>Node.js</li><li>PostgreSQL</li><li>GraphQL</li>
+          </ul>
+        </div>
+        <div class="stack__col">
+          <h3>Frontend</h3>
+          <ul>
+            <li>React</li><li>Next.js</li><li>CSS Architecture</li>
+            <li>Motion Design</li><li>Accessibility</li><li>Vite</li>
+          </ul>
+        </div>
+        <div class="stack__col">
+          <h3>Craft &amp; Ops</h3>
+          <ul>
+            <li>Design Systems</li><li>Docker</li><li>AWS</li>
+            <li>CI/CD</li><li>Terraform</li><li>Performance</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ✏️ EDIT: experience -->
+      <div class="exp">
+        <span class="sec-label">Experience</span>
+        <ul>
+          <li class="exp__row"><span class="exp__role">Senior Software Engineer</span><span class="exp__co">Contract</span><span class="exp__yr">2025 — Now</span></li>
+          <li class="exp__row"><span class="exp__role">Senior support Engineer</span><span class="exp__co">Early-stage Startup</span><span class="exp__yr">2024 — 2025</span></li>
+          <li class="exp__row"><span class="exp__role">software lead</span><span class="exp__co">Employment</span><span class="exp__yr">2023 — 2024</span></li>
+          <li class="exp__row"><span class="exp__role">Junior Software Engineer</span><span class="exp__co">Employment</span><span class="exp__yr">2022 — 2023</span></li>
+          <li class="exp__row"><span class="exp__role">Intern Software Engineer</span><span class="exp__co">Contract</span><span class="exp__yr">2022 — 2022</span></li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section contact" id="contact">
+      <span class="sec-label">05 — Contact</span>
+      <h2 class="contact__title">Have something<br />worth building?</h2>
+      <!-- ✏️ EDIT: your email -->
+      <a href="mailto:reaganprezzo@gmail.com" class="contact__email" data-cursor>reaganprezzo@gmail.com</a>
+
+      <div class="contact__cols">
+        <div>
+          <span class="sec-label">Elsewhere</span>
+          <ul class="contact__links">
+            <li><a href="https://github.com/Reagandennis" data-cursor>GitHub ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/reaganowiti/" data-cursor>LinkedIn ↗</a></li>
+            <li><a href="https://x.com/Reaganenochowi2" data-cursor>X / Twitter ↗</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="sec-label">Get the résumé</span>
+          <ul class="contact__links">
+            <li><a href="assets/resume.pdf" download data-cursor>Download PDF ↓</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__row">
+      <span>© 2026 Reagan Enoch Owiti</span>
+      <span class="footer__colophon">Typeset in Fraunces &amp; Space Grotesk · Built by hand, no frameworks</span>
+      <a href="#top" data-cursor>Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
