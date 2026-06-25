@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Reagan Enoch Owiti — Operational Software Consultant</title>
-  <meta name="description" content="Software consultant specialising in fleet management, GPS tracking, field operations, and enterprise web platforms. Based in Nairobi, building production systems for clients worldwide since 2019." />
+  <title>Services &amp; Engagement Models — Reagan Enoch Owiti</title>
+  <meta name="description" content="Services and engagement models for operational software — system design and build, fleet and GPS platforms, real-time dashboards, and technical advisory. Start small with a paid discovery sprint or fixed-scope pilot." />
   <meta name="author" content="Reagan Enoch Owiti" />
   <meta name="theme-color" content="#ECE6DA" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Reagan Enoch Owiti — Operational Software Consultant" />
-  <meta property="og:description" content="I build operational software that enterprises actually rely on — fleet, GPS, field operations, and enterprise platforms. Nairobi → Worldwide." />
+  <meta property="og:title" content="Services &amp; Engagement Models — Reagan Enoch Owiti" />
+  <meta property="og:description" content="From a single operational problem to a full system — designed, built, and handed over. Start small with a paid discovery sprint or fixed-scope pilot." />
   <meta property="og:image" content="assets/og-image.svg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -461,6 +461,61 @@
     .hero__title .line > span { transform: none !important; }
     .reveal { opacity: 1 !important; transform: none !important; }
   }
+
+  /* =========================================================
+     PAGE-SPECIFIC · services.html  (appended — uses tokens only)
+     ========================================================= */
+  /* Page intro — slimmer than the home hero */
+  .svc-intro { padding-top: clamp(3rem, 8vw, 6rem); padding-bottom: clamp(1rem, 3vw, 2rem); }
+
+  /* Offering card adds a deliverables sub-list under the shared .svc atom */
+  .svc__what {
+    margin-top: 0.4rem; padding-top: 1rem; border-top: 1px solid var(--line-2);
+    display: flex; flex-direction: column; gap: 0.5rem;
+  }
+  .svc__what-label { font-family: var(--mono); font-size: var(--fs-micro); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); }
+  .svc__what ul { display: flex; flex-direction: column; gap: 0.45rem; }
+  .svc__what li { display: flex; gap: 0.6rem; align-items: baseline; color: var(--ink-2); font-size: 0.95rem; }
+  .svc__what li::before { content: "→"; color: var(--accent); flex: none; }
+
+  /* "How I work" process band */
+  .process { border-block: 1px solid var(--line); }
+  .process__inner { padding-block: clamp(2.5rem, 5vw, 3.75rem); }
+  .process__head { margin-bottom: clamp(1.75rem, 4vw, 2.75rem); }
+  .process__title { font-family: var(--serif); font-size: var(--fs-h2); line-height: 1.0; letter-spacing: -0.025em; margin-top: var(--space-3); }
+  .process__title em { font-style: italic; color: var(--accent); }
+  .process__steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1px, 0.2vw, 1px); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--line); }
+  .process__step { background: var(--paper); padding: clamp(1.4rem, 2.8vw, 2.1rem); display: flex; flex-direction: column; gap: 0.6rem; transition: background 0.3s var(--ease); }
+  .process__step:hover { background: var(--paper-2); }
+  .process__step-n { font-family: var(--mono); font-size: var(--fs-micro); letter-spacing: 0.14em; color: var(--accent); }
+  .process__step-t { font-family: var(--serif); font-size: var(--fs-h3); line-height: 1.05; letter-spacing: -0.02em; }
+  .process__step-d { color: var(--ink-2); font-size: 0.95rem; }
+
+  /* Engagement models — three descriptive rows */
+  .models { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.25rem, 2.5vw, 2rem); margin-top: clamp(2rem, 4vw, 3rem); }
+  .model {
+    border: 1px solid var(--line); border-radius: var(--radius);
+    padding: clamp(1.4rem, 3vw, 2.1rem); display: flex; flex-direction: column; gap: 0.7rem;
+    background: color-mix(in srgb, var(--paper-2) 50%, transparent);
+    transition: border-color 0.3s var(--ease), transform 0.3s var(--ease);
+  }
+  .model:hover { border-color: var(--ink-3); transform: translateY(-3px); }
+  .model__n { font-family: var(--mono); font-size: var(--fs-micro); letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+  .model__t { font-family: var(--serif); font-size: var(--fs-h3); line-height: 1.05; letter-spacing: -0.02em; }
+  .model__d { color: var(--ink-2); font-size: 0.97rem; }
+  .models-line { margin-top: clamp(1.75rem, 3.5vw, 2.5rem); font-family: var(--serif); font-style: italic; font-size: clamp(1.2rem, 2.4vw, 1.75rem); line-height: 1.3; letter-spacing: -0.01em; max-width: 30ch; }
+  .models-note {
+    margin-top: 1.25rem; max-width: 58ch; color: var(--ink-2); font-size: 0.98rem;
+    border-left: 2px solid var(--line); padding-left: 1.1rem;
+  }
+
+  @media (max-width: 900px) {
+    .process__steps { grid-template-columns: repeat(2, 1fr); }
+    .models { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 620px) {
+    .process__steps { grid-template-columns: 1fr; }
+  }
   </style>
 </head>
 <body>
@@ -473,7 +528,7 @@
 
     <nav class="topnav" aria-label="Primary">
       <a href="work.html"><i>01</i> Work</a>
-      <a href="services.html"><i>02</i> Services</a>
+      <a href="services.html" aria-current="page"><i>02</i> Services</a>
       <a href="about.html"><i>03</i> About</a>
       <a href="contact.html"><i>04</i> Contact</a>
     </nav>
@@ -491,7 +546,7 @@
   <nav class="mobilenav" id="mobileNav" aria-label="Mobile" hidden>
     <ul>
       <li><a href="work.html"><i>01</i> Work</a></li>
-      <li><a href="services.html"><i>02</i> Services</a></li>
+      <li><a href="services.html" aria-current="page"><i>02</i> Services</a></li>
       <li><a href="about.html"><i>03</i> About</a></li>
       <li><a href="contact.html"><i>04</i> Contact</a></li>
     </ul>
@@ -502,265 +557,170 @@
   </nav>
 
   <main id="main">
-    <!-- ===================== HERO ===================== -->
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <p class="eyebrow hero__eyebrow">
-        <span><b>●</b> Software Consultant</span>
-        <span class="dim">Operational Software</span>
-        <span class="dim">Nairobi → Worldwide</span>
-      </p>
-
-      <h1 class="hero__title" id="hero-title">
-        <span class="line"><span>I build operational</span></span>
-        <span class="line"><span>software that enterprises</span></span>
-        <span class="line"><span><em>actually rely on.</em></span></span>
-      </h1>
-
-      <div class="hero__foot">
-        <p class="hero__lead">
-          Software consultant specialising in fleet management, GPS tracking,
-          field operations, and enterprise web platforms. Based in Nairobi,
-          working with clients worldwide since 2019.
-        </p>
-        <div class="hero__actions">
-          <a href="#work" class="btn btn--ghost">See my work <span class="arr">↓</span></a>
-          <a href="contact.html" class="btn">Let's talk about your project <span class="arr">→</span></a>
-        </div>
-      </div>
-
-      <!-- SIGNATURE: live systems-status bar -->
-      <div class="statusbar" role="status" aria-label="Current availability and status">
-        <span class="statusbar__badge"><span class="statusbar__dot" aria-hidden="true"></span>Available for new projects</span>
-        <span class="statusbar__item">Nairobi <strong id="nairobiTime">--:--</strong> EAT</span>
-        <span class="statusbar__item">Working remotely, worldwide</span>
-        <span class="statusbar__item"><strong>3</strong> systems in production</span>
-      </div>
-    </section>
-
-    <!-- ===================== STATS BAND ===================== -->
-    <section class="stats" aria-label="Track record">
-      <div class="wrap">
-        <div class="stats__grid">
-          <div class="stat reveal">
-            <div class="stat__n"><b>6+</b> years</div>
-            <div class="stat__l">Shipping production software</div>
-          </div>
-          <div class="stat reveal">
-            <div class="stat__n">3 systems</div>
-            <div class="stat__l">Live in production today</div>
-          </div>
-          <div class="stat reveal">
-            <div class="stat__n">Since 2019</div>
-            <div class="stat__l">Independent &amp; remote</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== CAPABILITIES TICKER ===================== -->
-    <div class="ticker" aria-label="Capabilities">
-      <div class="ticker__track" aria-hidden="true">
-        <span>Fleet ERP</span><b>✶</b><span>GPS Tracking</span><b>✶</b><span>Field Operations</span><b>✶</b>
-        <span>WhatsApp Integration</span><b>✶</b><span>Real-time Dashboards</span><b>✶</b><span>Enterprise APIs</span><b>✶</b>
-        <span>Nairobi → Worldwide</span><b>✶</b><span>Traccar</span><b>✶</b><span>Appwrite</span><b>✶</b><span>NocoDB</span><b>✶</b>
-        <span>Fleet ERP</span><b>✶</b><span>GPS Tracking</span><b>✶</b><span>Field Operations</span><b>✶</b>
-        <span>WhatsApp Integration</span><b>✶</b><span>Real-time Dashboards</span><b>✶</b><span>Enterprise APIs</span><b>✶</b>
-        <span>Nairobi → Worldwide</span><b>✶</b><span>Traccar</span><b>✶</b><span>Appwrite</span><b>✶</b><span>NocoDB</span><b>✶</b>
-      </div>
-    </div>
-
-    <!-- ===================== 01 · SELECTED WORK ===================== -->
-    <section class="section wrap" id="work" aria-labelledby="work-title">
-      <div class="work__head">
-        <div class="sec-head" style="margin-bottom:0">
-          <span class="eyebrow"><b>01</b> — Selected Work</span>
-          <h2 class="sec-title" id="work-title">Systems running<br />in the field</h2>
-        </div>
-        <a href="work.html" class="tlink">View all case studies <span class="arr">→</span></a>
-      </div>
-
-      <ul class="cards">
-        <!-- Project 1 -->
-        <li class="card reveal">
-          <a class="card__media" href="work.html#la-erp" aria-label="LA-ERP case study">
-            <svg viewBox="0 0 600 375" role="img" aria-label="Fleet route map">
-              <rect class="ph-bg" width="600" height="375"/>
-              <g class="ph-grid"><path d="M0 94 H600 M0 188 H600 M0 282 H600 M150 0 V375 M300 0 V375 M450 0 V375"/></g>
-              <path class="ph-ink" d="M70 300 C150 250 140 150 230 150 C320 150 320 250 410 230 C480 214 500 130 540 110"/>
-              <g class="ph-ink-f"><circle cx="70" cy="300" r="6"/><circle cx="230" cy="150" r="6"/><circle cx="410" cy="230" r="6"/></g>
-              <g class="ph-accent-f"><circle cx="540" cy="110" r="9"/></g>
-              <path class="ph-accent" d="M540 110 m-18 0 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0"/>
-              <text class="ph-label" x="40" y="345">LA-ERP / FLEET · GPS</text>
-            </svg>
-          </a>
-          <div class="card__body">
-            <div class="card__eyebrow"><span>Fleet &amp; Vehicle Management</span><b>2024 – 25</b></div>
-            <h3 class="card__title">LA-ERP</h3>
-            <p class="card__desc">Production fleet ERP for a logistics operator — trips, drivers, fuel, inspections, maintenance, and live GPS via Traccar. Replaced manual spreadsheets with full operational visibility across the fleet.</p>
-            <div class="card__tags"><span class="tag">Traccar</span><span class="tag">Appwrite</span><span class="tag">NocoDB</span><span class="tag">WhatsApp API</span></div>
-            <div class="card__foot"><a href="work.html#la-erp" class="tlink">Read case study <span class="arr">→</span></a></div>
-          </div>
-        </li>
-
-        <!-- Project 2 -->
-        <li class="card reveal">
-          <a class="card__media" href="work.html#tkgm" aria-label="TKGM case study">
-            <svg viewBox="0 0 600 375" role="img" aria-label="Dispatch command grid">
-              <rect class="ph-bg" width="600" height="375"/>
-              <g class="ph-grid"><path d="M0 75 H600 M0 150 H600 M0 225 H600 M0 300 H600 M120 0 V375 M240 0 V375 M360 0 V375 M480 0 V375"/></g>
-              <g class="ph-ink"><path d="M180 130 L420 250"/><path d="M180 130 L300 280"/></g>
-              <g class="ph-ink"><path d="M150 130 h60 M180 100 v60"/><path d="M270 280 h60 M300 250 v60"/></g>
-              <circle class="ph-ink" cx="420" cy="250" r="18"/>
-              <g class="ph-accent"><circle cx="180" cy="130" r="12"/><circle cx="180" cy="130" r="24" stroke-opacity="0.5"/></g>
-              <circle class="ph-accent-f" cx="180" cy="130" r="5"/>
-              <text class="ph-label" x="40" y="345">TKGM / DISPATCH · SAFETY</text>
-            </svg>
-          </a>
-          <div class="card__body">
-            <div class="card__eyebrow"><span>Field Worker Safety &amp; Dispatch</span><b>2024</b></div>
-            <h3 class="card__title">TKGM</h3>
-            <p class="card__desc">A command-centre dashboard for field-worker safety — real-time location awareness, dispatch coordination, and incident reporting. Built as a white-label product with document-style, ink-line cartography for operations teams.</p>
-            <div class="card__tags"><span class="tag">Traccar</span><span class="tag">Real-time maps</span><span class="tag">Dispatch</span><span class="tag">White-label</span></div>
-            <div class="card__foot"><a href="work.html#tkgm" class="tlink">Read case study <span class="arr">→</span></a></div>
-          </div>
-        </li>
-
-        <!-- Project 3 -->
-        <li class="card reveal">
-          <a class="card__media" href="work.html#techgetafrica" aria-label="TechGetAfrica case study">
-            <svg viewBox="0 0 600 375" role="img" aria-label="Cloud and learning network">
-              <rect class="ph-bg" width="600" height="375"/>
-              <g class="ph-grid"><path d="M0 94 H600 M0 188 H600 M0 282 H600 M200 0 V375 M400 0 V375"/></g>
-              <path class="ph-ink" d="M230 150 a44 44 0 0 1 8 -2 a52 52 0 0 1 101 6 a40 40 0 0 1 -6 79 H250 a44 44 0 0 1 -20 -83 Z"/>
-              <g class="ph-ink"><path d="M150 280 L300 215 M300 215 L450 280 M300 215 L300 130"/></g>
-              <g class="ph-ink-f"><circle cx="150" cy="280" r="7"/><circle cx="450" cy="280" r="7"/></g>
-              <g class="ph-accent-f"><circle cx="300" cy="215" r="9"/></g>
-              <text class="ph-label" x="40" y="345">TECHGETAFRICA / EDTECH · CLOUD</text>
-            </svg>
-          </a>
-          <div class="card__body">
-            <div class="card__eyebrow"><span>EdTech &amp; Cloud Platform</span><b>2022 – now</b></div>
-            <h3 class="card__title">TechGetAfrica</h3>
-            <p class="card__desc">Founded and built a technical-education platform serving learners across East Africa — a Moodle LMS, booking system, and an infrastructure stack on Azure and a self-hosted homelab. Now in partnership with Strathmore University.</p>
-            <div class="card__tags"><span class="tag">Moodle</span><span class="tag">Azure</span><span class="tag">Docker</span><span class="tag">Traefik</span><span class="tag">Cloudflare</span></div>
-            <div class="card__foot"><a href="work.html#techgetafrica" class="tlink">Read case study <span class="arr">→</span></a></div>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ===================== 02 · SERVICES ===================== -->
-    <section class="section wrap" id="services" aria-labelledby="svc-title">
+    <!-- ===================== INTRO ===================== -->
+    <section class="wrap section svc-intro" aria-labelledby="svc-intro-title">
       <div class="sec-head">
         <span class="eyebrow"><b>02</b> — Services</span>
-        <h2 class="sec-title" id="svc-title">How I can help<br />your operation</h2>
+        <h2 class="sec-title" id="svc-intro-title">How I can help<br />your <em>operation</em></h2>
         <p class="lede">From a single operational problem to a full system — designed, built, and handed over. Engagements that fit how your team actually works.</p>
       </div>
+    </section>
 
+    <!-- ===================== FOUR OFFERINGS ===================== -->
+    <section class="wrap" aria-label="Service offerings">
       <div class="svc-grid">
-        <article class="svc">
+        <article class="svc reveal">
           <span class="svc__n">01</span>
           <h3 class="svc__title">System design &amp; build</h3>
-          <p class="svc__desc">End-to-end delivery: understanding the operational problem, then architecture, build, and handoff — so your team owns a system that works.</p>
+          <p class="svc__desc">End-to-end delivery: understanding the operational problem first, then architecture, build, and handoff. The point isn't a clever codebase — it's a system your team owns and runs without me in the loop.</p>
+          <div class="svc__what">
+            <span class="svc__what-label">What that can look like</span>
+            <ul>
+              <li>Mapping the real workflow before any code</li>
+              <li>A clear architecture you and your team can stand behind</li>
+              <li>A built, working system handed over with documentation</li>
+            </ul>
+          </div>
         </article>
-        <article class="svc">
+
+        <article class="svc reveal">
           <span class="svc__n">02</span>
           <h3 class="svc__title">Fleet &amp; GPS platforms</h3>
-          <p class="svc__desc">Real-time tracking, dispatch, and fleet management built on proven infrastructure — the kind of system an operation runs on every day.</p>
+          <p class="svc__desc">Real-time tracking, dispatch, and fleet management built on proven infrastructure such as Traccar — the kind of system an operation depends on every working day, not a demo that falls over in the field.</p>
+          <div class="svc__what">
+            <span class="svc__what-label">What that can look like</span>
+            <ul>
+              <li>Live vehicle and asset tracking on proven infrastructure</li>
+              <li>Dispatch and trip coordination for an operations team</li>
+              <li>Fleet records — drivers, fuel, inspections, maintenance</li>
+            </ul>
+          </div>
         </article>
-        <article class="svc">
+
+        <article class="svc reveal">
           <span class="svc__n">03</span>
           <h3 class="svc__title">Real-time dashboards &amp; integrations</h3>
-          <p class="svc__desc">Operations dashboards, WhatsApp and API integrations, and data tooling that turn scattered information into decisions your team can act on.</p>
+          <p class="svc__desc">Operations dashboards, WhatsApp and API integrations, and data tooling that turn scattered information into decisions your team can act on — so the people running the operation can see what's happening in one place.</p>
+          <div class="svc__what">
+            <span class="svc__what-label">What that can look like</span>
+            <ul>
+              <li>A single operations dashboard pulling from your systems</li>
+              <li>WhatsApp and API integrations into existing tools</li>
+              <li>Data tooling that turns raw activity into decisions</li>
+            </ul>
+          </div>
         </article>
-        <article class="svc">
+
+        <article class="svc reveal">
           <span class="svc__n">04</span>
           <h3 class="svc__title">Technical advisory</h3>
-          <p class="svc__desc">Architecture review, system audits, and consulting retainers — a senior pair of hands to de-risk the decisions before they get expensive.</p>
+          <p class="svc__desc">Architecture review, system audits, and consulting retainers — a senior pair of hands to de-risk the decisions before they get expensive. Often the cheapest hour you'll spend on a build is the one that stops the wrong one.</p>
+          <div class="svc__what">
+            <span class="svc__what-label">What that can look like</span>
+            <ul>
+              <li>An architecture review before you commit to a direction</li>
+              <li>A system audit of what you already have running</li>
+              <li>An ongoing advisory retainer for senior input on call</li>
+            </ul>
+          </div>
         </article>
       </div>
+    </section>
 
-      <!-- Low-friction "start small" entry point -->
+    <!-- ===================== HOW I WORK (process band) ===================== -->
+    <section class="process" aria-labelledby="process-title">
+      <div class="wrap process__inner">
+        <div class="process__head reveal">
+          <span class="eyebrow">How I work</span>
+          <h2 class="process__title" id="process-title">A senior, low-overhead way <em>to deliver.</em></h2>
+        </div>
+        <div class="process__steps">
+          <div class="process__step reveal">
+            <span class="process__step-n">01 — Understand</span>
+            <h3 class="process__step-t">Understand</h3>
+            <p class="process__step-d">I start with the operational problem — talking to the people who actually do the work, not just the brief.</p>
+          </div>
+          <div class="process__step reveal">
+            <span class="process__step-n">02 — Architect</span>
+            <h3 class="process__step-t">Architect</h3>
+            <p class="process__step-d">A clear, honest design — what to build, what to reuse, and what to leave out — so the system fits the real workflow.</p>
+          </div>
+          <div class="process__step reveal">
+            <span class="process__step-n">03 — Build</span>
+            <h3 class="process__step-t">Build</h3>
+            <p class="process__step-d">Built on proven infrastructure for reliability, shipped in working pieces you can see and react to as they land.</p>
+          </div>
+          <div class="process__step reveal">
+            <span class="process__step-n">04 — Hand over</span>
+            <h3 class="process__step-t">Hand over</h3>
+            <p class="process__step-d">Documented and handed off, so your team owns a system that keeps running long after the engagement ends.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== START SMALL (prominent, low-friction) ===================== -->
+    <section class="wrap section" id="start-small" aria-labelledby="start-small-title">
+      <div class="sec-head" style="margin-bottom:clamp(1.5rem, 4vw, 2.5rem)">
+        <span class="eyebrow">Start small</span>
+        <h2 class="sec-title" id="start-small-title">Test the relationship <em>first.</em></h2>
+      </div>
+
       <div class="starter reveal">
         <div>
-          <span class="starter__tag"><span class="statusbar__dot" aria-hidden="true"></span>Start small</span>
-          <h3 class="starter__title">Not ready for a full build? Test the relationship first.</h3>
-          <p class="starter__desc">Begin with a paid discovery sprint or a fixed-scope pilot — a system audit or a small, real deliverable — so you can see exactly how we work together before committing to anything larger. The lowest-risk way to start, especially remotely.</p>
+          <span class="starter__tag"><span class="statusbar__dot" aria-hidden="true"></span>Lowest-risk way to start</span>
+          <h3 class="starter__title">Not ready for a full build? Start with a paid discovery sprint.</h3>
+          <p class="starter__desc">Before anyone commits to a large engagement, we work together on something small and real — a focused system or architecture audit, or a scoped pilot of one real workflow. Fixed scope, fixed timeline, and a clear path to the full build, or an honest answer that it isn't the right move. It's the lowest-risk way to start, especially for remote clients who can't meet in person.</p>
           <div style="margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:0.8rem;">
             <a href="contact.html" class="btn">Book a discovery sprint <span class="arr">→</span></a>
-            <a href="services.html#start-small" class="btn btn--ghost">How it works <span class="arr">→</span></a>
+            <a href="https://cal.techgetafrica.com" class="btn btn--ghost" target="_blank" rel="noopener">Book a call <span class="arr">→</span></a>
           </div>
         </div>
         <ul class="starter__list" aria-label="What a starter engagement can be">
           <li>A focused system or architecture audit</li>
           <li>A scoped pilot of one real workflow</li>
-          <li>A fixed price, a fixed timeline</li>
+          <li>A fixed scope and a fixed timeline</li>
           <li>A clear path to the full build — or not</li>
         </ul>
       </div>
-
-      <div class="engagements">
-        <span class="dim" style="font-family:var(--mono); font-size:var(--fs-micro); letter-spacing:0.12em; text-transform:uppercase;">Engagement models</span>
-        <span class="tag">Project-based</span>
-        <span class="tag">Monthly retainer</span>
-        <span class="tag">Technical advisory</span>
-        <a href="services.html" class="tlink" style="margin-left:auto">See services &amp; engagement models <span class="arr">→</span></a>
-      </div>
     </section>
 
-    <!-- ===================== PROOF BAND (real facts only) ===================== -->
-    <section class="proof" aria-label="Credibility">
-      <div class="wrap proof__inner">
-        <p class="proof__lead reveal">Built for teams whose<br />software <em>can't go down.</em></p>
-        <dl class="proof__facts reveal">
-          <div class="proof__fact"><dt>Academic partner</dt><dd><b>Strathmore University</b> — TechGetAfrica</dd></div>
-          <div class="proof__fact"><dt>Sectors served</dt><dd>Logistics, transport &amp; field-services</dd></div>
-          <div class="proof__fact"><dt>In production on</dt><dd>Traccar · Appwrite · NocoDB · Azure</dd></div>
-          <div class="proof__fact"><dt>Reach</dt><dd>East Africa, delivered <b>remotely worldwide</b></dd></div>
-        </dl>
+    <!-- ===================== ENGAGEMENT MODELS ===================== -->
+    <section class="wrap section" aria-labelledby="models-title" style="padding-top:0">
+      <div class="sec-head">
+        <span class="eyebrow">Engagement models</span>
+        <h2 class="sec-title" id="models-title">Ways we can<br />work together</h2>
+        <p class="lede">However the work is shaped, the goal is the same — reliable software, delivered without unnecessary overhead.</p>
       </div>
+
+      <div class="models">
+        <article class="model reveal">
+          <span class="model__n">Type 01</span>
+          <h3 class="model__t">Project-based</h3>
+          <p class="model__d">A defined system, scoped end-to-end and delivered to a clear outcome — the right fit when you know what needs building.</p>
+        </article>
+        <article class="model reveal">
+          <span class="model__n">Type 02</span>
+          <h3 class="model__t">Monthly retainer</h3>
+          <p class="model__d">Ongoing capacity to build, maintain, and evolve a system over time — for an operation that keeps moving and needs a steady hand.</p>
+        </article>
+        <article class="model reveal">
+          <span class="model__n">Type 03</span>
+          <h3 class="model__t">Technical advisory</h3>
+          <p class="model__d">A senior pair of hands on call for architecture review, audits, and the decisions you don't want to get wrong before they get expensive.</p>
+        </article>
+      </div>
+
+      <p class="models-line reveal">Available for project-based engagements, monthly retainers, and technical advisory.</p>
+
+      <p class="models-note reveal">Pricing is intentionally not listed here — every engagement is scoped to your situation, and we discuss numbers on a short discovery call once we both understand the work. That way the figure fits the actual problem, not a guess made before we've spoken.</p>
     </section>
 
-    <!-- ===================== 03 · ABOUT (teaser) ===================== -->
-    <section class="section wrap" id="about" aria-labelledby="about-title">
-      <span class="eyebrow"><b>03</b> — About</span>
-      <div class="about__grid" style="margin-top:1.5rem">
-        <div>
-          <p class="about__statement" id="about-title">Six years building software that operations teams <em>depend on every day.</em></p>
-          <div class="about__body">
-            <p>I work end-to-end — from understanding your operational problem through architecture, build, and handoff. I'm comfortable talking to procurement, engineering teams, and end users in the same week.</p>
-            <p>Based in Nairobi, I've shipped production systems for clients across East Africa and work remotely with international organisations that need reliable software built without unnecessary overhead.</p>
-          </div>
-          <div class="about__foot">
-            <a href="about.html" class="tlink">More about how I work <span class="arr">→</span></a>
-          </div>
-        </div>
-
-        <figure class="portrait reveal">
-          <div class="portrait__frame">
-            <!-- Designed SVG monogram (swap for a real photo when available) -->
-            <svg viewBox="0 0 480 560" role="img" aria-label="Monogram — Reagan Enoch Owiti">
-              <rect class="mg-bg" width="480" height="560"/>
-              <rect class="mg-frame" x="16" y="16" width="448" height="528"/>
-              <rect class="mg-accent" x="372" y="56" width="52" height="52"/>
-              <text class="mg-ink" x="240" y="338" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="500" font-size="232" letter-spacing="-8">RO</text>
-              <!-- subtle GPS route accent -->
-              <path class="mg-route" d="M70 470 C150 430 150 500 230 470 C300 444 320 500 410 466"/>
-              <circle class="mg-node" cx="70" cy="470" r="8"/>
-              <circle class="mg-node" cx="230" cy="470" r="8"/>
-              <circle class="mg-accent" cx="410" cy="466" r="8"/>
-            </svg>
-          </div>
-          <figcaption>Reagan Enoch Owiti — Nairobi, Kenya</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- ===================== 04 · START A PROJECT (closing CTA) ===================== -->
-    <section class="section wrap cta" id="contact" aria-labelledby="cta-title">
+    <!-- ===================== CLOSING CTA ===================== -->
+    <section class="section wrap cta" aria-labelledby="cta-title">
       <span class="eyebrow"><b>04</b> — Start a Project</span>
-      <h2 class="cta__title" id="cta-title" style="margin-top:1rem">Have an operation that runs on <em>software?</em></h2>
-      <p class="lede">Tell me what your team is trying to do. We'll scope it on a short call — no obligation, and pricing comes once we both understand the work.</p>
+      <h2 class="cta__title" id="cta-title" style="margin-top:1rem">Let's scope the <em>right</em> engagement.</h2>
+      <p class="lede">Tell me what your team is trying to do. We'll find the smallest sensible first step — and the numbers come once we both understand the work.</p>
 
       <div class="cta__row">
         <a href="contact.html" class="btn">Start a project <span class="arr">→</span></a>

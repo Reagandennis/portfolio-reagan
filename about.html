@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Reagan Enoch Owiti — Operational Software Consultant</title>
-  <meta name="description" content="Software consultant specialising in fleet management, GPS tracking, field operations, and enterprise web platforms. Based in Nairobi, building production systems for clients worldwide since 2019." />
+  <title>About — Reagan Enoch Owiti</title>
+  <meta name="description" content="Six years building operational software that teams depend on — fleet, GPS, field operations, and enterprise ERPs. End-to-end ownership, reliability-first, Nairobi to worldwide and remote since 2019." />
   <meta name="author" content="Reagan Enoch Owiti" />
   <meta name="theme-color" content="#ECE6DA" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Reagan Enoch Owiti — Operational Software Consultant" />
-  <meta property="og:description" content="I build operational software that enterprises actually rely on — fleet, GPS, field operations, and enterprise platforms. Nairobi → Worldwide." />
+  <meta property="og:title" content="About — Reagan Enoch Owiti" />
+  <meta property="og:description" content="Operational software consultant, independent since 2019. End-to-end ownership, reliability-first, built without unnecessary overhead. Nairobi → Worldwide." />
   <meta property="og:image" content="assets/og-image.svg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -461,6 +461,82 @@
     .hero__title .line > span { transform: none !important; }
     .reveal { opacity: 1 !important; transform: none !important; }
   }
+
+  /* =========================================================
+     PAGE-SPECIFIC · about.html (nav 03)
+     Tokens only — no hard-coded colours.
+     ========================================================= */
+
+  /* About intro: statement + monogram, mirrors homepage about__grid */
+  .aboutintro__grid { display: grid; grid-template-columns: 1.45fr 0.85fr; gap: clamp(2rem, 6vw, 5rem); align-items: start; margin-top: clamp(2rem, 4vw, 3rem); }
+  .aboutintro__statement { font-family: var(--serif); font-size: clamp(1.7rem, 3.4vw, 3rem); line-height: 1.12; letter-spacing: -0.02em; max-width: 24ch; }
+  .aboutintro__statement em { font-style: italic; color: var(--accent); }
+  .aboutintro__body { color: var(--ink-2); max-width: 56ch; margin-top: var(--space-4); font-size: var(--fs-lead); }
+  .aboutintro__body p + p { margin-top: var(--space-3); }
+
+  /* Two-column editorial detail (How I work / Nairobi → Worldwide) */
+  .detail__head { display: flex; flex-wrap: wrap; gap: 1rem; align-items: baseline; justify-content: space-between; margin-bottom: clamp(1.75rem, 4vw, 2.75rem); }
+  .feature-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(1px, 0.2vw, 1px); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--line); }
+  .feature {
+    background: var(--paper); padding: clamp(1.5rem, 3vw, 2.4rem);
+    display: flex; flex-direction: column; gap: 0.7rem;
+    transition: background 0.3s var(--ease);
+  }
+  .feature:hover { background: var(--paper-2); }
+  .feature__n { font-family: var(--mono); font-size: var(--fs-micro); letter-spacing: 0.12em; color: var(--accent); }
+  .feature__title { font-family: var(--serif); font-size: var(--fs-h3); line-height: 1.1; letter-spacing: -0.02em; }
+  .feature__desc { color: var(--ink-2); font-size: 0.98rem; max-width: 44ch; }
+
+  /* Nairobi → Worldwide band */
+  .geo { border-block: 1px solid var(--line); }
+  .geo__inner { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(1.5rem, 5vw, 4rem); align-items: center; padding-block: clamp(2.25rem, 5vw, 3.5rem); }
+  .geo__lead { font-family: var(--serif); font-size: clamp(1.5rem, 2.8vw, 2.3rem); line-height: 1.16; letter-spacing: -0.02em; }
+  .geo__lead em { font-style: italic; color: var(--accent); }
+  .geo__facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem 2rem; }
+  .geo__fact { display: flex; flex-direction: column; gap: 0.3rem; }
+  .geo__fact dt { font-family: var(--mono); font-size: var(--fs-micro); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
+  .geo__fact dd { margin: 0; font-size: 1.02rem; color: var(--ink); }
+  .geo__fact dd b { color: var(--accent); font-weight: 500; }
+  .geo__clock { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+  /* Timeline · selected milestones */
+  .timeline { margin-top: clamp(2rem, 4vw, 3rem); border-top: 1px solid var(--line); }
+  .tl {
+    display: grid; grid-template-columns: 7rem 1fr auto; gap: clamp(1rem, 3vw, 2.5rem);
+    align-items: baseline; padding-block: clamp(1.4rem, 3vw, 2.1rem);
+    border-bottom: 1px solid var(--line);
+    transition: background 0.3s var(--ease);
+  }
+  .tl:hover { background: color-mix(in srgb, var(--paper-2) 55%, transparent); }
+  .tl__year { font-family: var(--mono); font-size: var(--fs-sm); letter-spacing: 0.08em; color: var(--accent); white-space: nowrap; }
+  .tl__title { font-family: var(--serif); font-size: var(--fs-h3); line-height: 1.1; letter-spacing: -0.02em; }
+  .tl__desc { color: var(--ink-2); margin-top: 0.4rem; max-width: 56ch; font-size: 0.98rem; }
+  .tl__tag { font-family: var(--mono); font-size: var(--fs-micro); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); white-space: nowrap; }
+  .tl__note { color: var(--ink-2); margin-top: clamp(1.25rem, 3vw, 1.75rem); font-size: 0.96rem; }
+
+  /* Tech stack — grouped chips */
+  .stack { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(1px, 0.2vw, 1px); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--line); margin-top: clamp(2rem, 4vw, 3rem); }
+  .stack__group {
+    background: var(--paper); padding: clamp(1.5rem, 3vw, 2.4rem);
+    display: flex; flex-direction: column; gap: 1rem;
+    transition: background 0.3s var(--ease);
+  }
+  .stack__group:hover { background: var(--paper-2); }
+  .stack__label { display: flex; align-items: baseline; gap: 0.6rem; }
+  .stack__n { font-family: var(--mono); font-size: var(--fs-micro); letter-spacing: 0.12em; color: var(--accent); }
+  .stack__title { font-family: var(--serif); font-size: var(--fs-h3); line-height: 1.05; letter-spacing: -0.02em; }
+  .stack__chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+  @media (max-width: 900px) {
+    .aboutintro__grid { grid-template-columns: 1fr; }
+    .geo__inner { grid-template-columns: 1fr; }
+    .feature-list { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 620px) {
+    .stack { grid-template-columns: 1fr; }
+    .tl { grid-template-columns: 1fr; gap: 0.5rem; }
+    .tl__tag { order: -1; }
+  }
   </style>
 </head>
 <body>
@@ -474,7 +550,7 @@
     <nav class="topnav" aria-label="Primary">
       <a href="work.html"><i>01</i> Work</a>
       <a href="services.html"><i>02</i> Services</a>
-      <a href="about.html"><i>03</i> About</a>
+      <a href="about.html" aria-current="page"><i>03</i> About</a>
       <a href="contact.html"><i>04</i> Contact</a>
     </nav>
 
@@ -492,7 +568,7 @@
     <ul>
       <li><a href="work.html"><i>01</i> Work</a></li>
       <li><a href="services.html"><i>02</i> Services</a></li>
-      <li><a href="about.html"><i>03</i> About</a></li>
+      <li><a href="about.html" aria-current="page"><i>03</i> About</a></li>
       <li><a href="contact.html"><i>04</i> Contact</a></li>
     </ul>
     <a href="contact.html" class="btn">Start a project <span class="arr">→</span></a>
@@ -502,237 +578,17 @@
   </nav>
 
   <main id="main">
-    <!-- ===================== HERO ===================== -->
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <p class="eyebrow hero__eyebrow">
-        <span><b>●</b> Software Consultant</span>
-        <span class="dim">Operational Software</span>
-        <span class="dim">Nairobi → Worldwide</span>
-      </p>
-
-      <h1 class="hero__title" id="hero-title">
-        <span class="line"><span>I build operational</span></span>
-        <span class="line"><span>software that enterprises</span></span>
-        <span class="line"><span><em>actually rely on.</em></span></span>
-      </h1>
-
-      <div class="hero__foot">
-        <p class="hero__lead">
-          Software consultant specialising in fleet management, GPS tracking,
-          field operations, and enterprise web platforms. Based in Nairobi,
-          working with clients worldwide since 2019.
-        </p>
-        <div class="hero__actions">
-          <a href="#work" class="btn btn--ghost">See my work <span class="arr">↓</span></a>
-          <a href="contact.html" class="btn">Let's talk about your project <span class="arr">→</span></a>
-        </div>
-      </div>
-
-      <!-- SIGNATURE: live systems-status bar -->
-      <div class="statusbar" role="status" aria-label="Current availability and status">
-        <span class="statusbar__badge"><span class="statusbar__dot" aria-hidden="true"></span>Available for new projects</span>
-        <span class="statusbar__item">Nairobi <strong id="nairobiTime">--:--</strong> EAT</span>
-        <span class="statusbar__item">Working remotely, worldwide</span>
-        <span class="statusbar__item"><strong>3</strong> systems in production</span>
-      </div>
-    </section>
-
-    <!-- ===================== STATS BAND ===================== -->
-    <section class="stats" aria-label="Track record">
-      <div class="wrap">
-        <div class="stats__grid">
-          <div class="stat reveal">
-            <div class="stat__n"><b>6+</b> years</div>
-            <div class="stat__l">Shipping production software</div>
-          </div>
-          <div class="stat reveal">
-            <div class="stat__n">3 systems</div>
-            <div class="stat__l">Live in production today</div>
-          </div>
-          <div class="stat reveal">
-            <div class="stat__n">Since 2019</div>
-            <div class="stat__l">Independent &amp; remote</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== CAPABILITIES TICKER ===================== -->
-    <div class="ticker" aria-label="Capabilities">
-      <div class="ticker__track" aria-hidden="true">
-        <span>Fleet ERP</span><b>✶</b><span>GPS Tracking</span><b>✶</b><span>Field Operations</span><b>✶</b>
-        <span>WhatsApp Integration</span><b>✶</b><span>Real-time Dashboards</span><b>✶</b><span>Enterprise APIs</span><b>✶</b>
-        <span>Nairobi → Worldwide</span><b>✶</b><span>Traccar</span><b>✶</b><span>Appwrite</span><b>✶</b><span>NocoDB</span><b>✶</b>
-        <span>Fleet ERP</span><b>✶</b><span>GPS Tracking</span><b>✶</b><span>Field Operations</span><b>✶</b>
-        <span>WhatsApp Integration</span><b>✶</b><span>Real-time Dashboards</span><b>✶</b><span>Enterprise APIs</span><b>✶</b>
-        <span>Nairobi → Worldwide</span><b>✶</b><span>Traccar</span><b>✶</b><span>Appwrite</span><b>✶</b><span>NocoDB</span><b>✶</b>
-      </div>
-    </div>
-
-    <!-- ===================== 01 · SELECTED WORK ===================== -->
-    <section class="section wrap" id="work" aria-labelledby="work-title">
-      <div class="work__head">
-        <div class="sec-head" style="margin-bottom:0">
-          <span class="eyebrow"><b>01</b> — Selected Work</span>
-          <h2 class="sec-title" id="work-title">Systems running<br />in the field</h2>
-        </div>
-        <a href="work.html" class="tlink">View all case studies <span class="arr">→</span></a>
-      </div>
-
-      <ul class="cards">
-        <!-- Project 1 -->
-        <li class="card reveal">
-          <a class="card__media" href="work.html#la-erp" aria-label="LA-ERP case study">
-            <svg viewBox="0 0 600 375" role="img" aria-label="Fleet route map">
-              <rect class="ph-bg" width="600" height="375"/>
-              <g class="ph-grid"><path d="M0 94 H600 M0 188 H600 M0 282 H600 M150 0 V375 M300 0 V375 M450 0 V375"/></g>
-              <path class="ph-ink" d="M70 300 C150 250 140 150 230 150 C320 150 320 250 410 230 C480 214 500 130 540 110"/>
-              <g class="ph-ink-f"><circle cx="70" cy="300" r="6"/><circle cx="230" cy="150" r="6"/><circle cx="410" cy="230" r="6"/></g>
-              <g class="ph-accent-f"><circle cx="540" cy="110" r="9"/></g>
-              <path class="ph-accent" d="M540 110 m-18 0 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0"/>
-              <text class="ph-label" x="40" y="345">LA-ERP / FLEET · GPS</text>
-            </svg>
-          </a>
-          <div class="card__body">
-            <div class="card__eyebrow"><span>Fleet &amp; Vehicle Management</span><b>2024 – 25</b></div>
-            <h3 class="card__title">LA-ERP</h3>
-            <p class="card__desc">Production fleet ERP for a logistics operator — trips, drivers, fuel, inspections, maintenance, and live GPS via Traccar. Replaced manual spreadsheets with full operational visibility across the fleet.</p>
-            <div class="card__tags"><span class="tag">Traccar</span><span class="tag">Appwrite</span><span class="tag">NocoDB</span><span class="tag">WhatsApp API</span></div>
-            <div class="card__foot"><a href="work.html#la-erp" class="tlink">Read case study <span class="arr">→</span></a></div>
-          </div>
-        </li>
-
-        <!-- Project 2 -->
-        <li class="card reveal">
-          <a class="card__media" href="work.html#tkgm" aria-label="TKGM case study">
-            <svg viewBox="0 0 600 375" role="img" aria-label="Dispatch command grid">
-              <rect class="ph-bg" width="600" height="375"/>
-              <g class="ph-grid"><path d="M0 75 H600 M0 150 H600 M0 225 H600 M0 300 H600 M120 0 V375 M240 0 V375 M360 0 V375 M480 0 V375"/></g>
-              <g class="ph-ink"><path d="M180 130 L420 250"/><path d="M180 130 L300 280"/></g>
-              <g class="ph-ink"><path d="M150 130 h60 M180 100 v60"/><path d="M270 280 h60 M300 250 v60"/></g>
-              <circle class="ph-ink" cx="420" cy="250" r="18"/>
-              <g class="ph-accent"><circle cx="180" cy="130" r="12"/><circle cx="180" cy="130" r="24" stroke-opacity="0.5"/></g>
-              <circle class="ph-accent-f" cx="180" cy="130" r="5"/>
-              <text class="ph-label" x="40" y="345">TKGM / DISPATCH · SAFETY</text>
-            </svg>
-          </a>
-          <div class="card__body">
-            <div class="card__eyebrow"><span>Field Worker Safety &amp; Dispatch</span><b>2024</b></div>
-            <h3 class="card__title">TKGM</h3>
-            <p class="card__desc">A command-centre dashboard for field-worker safety — real-time location awareness, dispatch coordination, and incident reporting. Built as a white-label product with document-style, ink-line cartography for operations teams.</p>
-            <div class="card__tags"><span class="tag">Traccar</span><span class="tag">Real-time maps</span><span class="tag">Dispatch</span><span class="tag">White-label</span></div>
-            <div class="card__foot"><a href="work.html#tkgm" class="tlink">Read case study <span class="arr">→</span></a></div>
-          </div>
-        </li>
-
-        <!-- Project 3 -->
-        <li class="card reveal">
-          <a class="card__media" href="work.html#techgetafrica" aria-label="TechGetAfrica case study">
-            <svg viewBox="0 0 600 375" role="img" aria-label="Cloud and learning network">
-              <rect class="ph-bg" width="600" height="375"/>
-              <g class="ph-grid"><path d="M0 94 H600 M0 188 H600 M0 282 H600 M200 0 V375 M400 0 V375"/></g>
-              <path class="ph-ink" d="M230 150 a44 44 0 0 1 8 -2 a52 52 0 0 1 101 6 a40 40 0 0 1 -6 79 H250 a44 44 0 0 1 -20 -83 Z"/>
-              <g class="ph-ink"><path d="M150 280 L300 215 M300 215 L450 280 M300 215 L300 130"/></g>
-              <g class="ph-ink-f"><circle cx="150" cy="280" r="7"/><circle cx="450" cy="280" r="7"/></g>
-              <g class="ph-accent-f"><circle cx="300" cy="215" r="9"/></g>
-              <text class="ph-label" x="40" y="345">TECHGETAFRICA / EDTECH · CLOUD</text>
-            </svg>
-          </a>
-          <div class="card__body">
-            <div class="card__eyebrow"><span>EdTech &amp; Cloud Platform</span><b>2022 – now</b></div>
-            <h3 class="card__title">TechGetAfrica</h3>
-            <p class="card__desc">Founded and built a technical-education platform serving learners across East Africa — a Moodle LMS, booking system, and an infrastructure stack on Azure and a self-hosted homelab. Now in partnership with Strathmore University.</p>
-            <div class="card__tags"><span class="tag">Moodle</span><span class="tag">Azure</span><span class="tag">Docker</span><span class="tag">Traefik</span><span class="tag">Cloudflare</span></div>
-            <div class="card__foot"><a href="work.html#techgetafrica" class="tlink">Read case study <span class="arr">→</span></a></div>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ===================== 02 · SERVICES ===================== -->
-    <section class="section wrap" id="services" aria-labelledby="svc-title">
-      <div class="sec-head">
-        <span class="eyebrow"><b>02</b> — Services</span>
-        <h2 class="sec-title" id="svc-title">How I can help<br />your operation</h2>
-        <p class="lede">From a single operational problem to a full system — designed, built, and handed over. Engagements that fit how your team actually works.</p>
-      </div>
-
-      <div class="svc-grid">
-        <article class="svc">
-          <span class="svc__n">01</span>
-          <h3 class="svc__title">System design &amp; build</h3>
-          <p class="svc__desc">End-to-end delivery: understanding the operational problem, then architecture, build, and handoff — so your team owns a system that works.</p>
-        </article>
-        <article class="svc">
-          <span class="svc__n">02</span>
-          <h3 class="svc__title">Fleet &amp; GPS platforms</h3>
-          <p class="svc__desc">Real-time tracking, dispatch, and fleet management built on proven infrastructure — the kind of system an operation runs on every day.</p>
-        </article>
-        <article class="svc">
-          <span class="svc__n">03</span>
-          <h3 class="svc__title">Real-time dashboards &amp; integrations</h3>
-          <p class="svc__desc">Operations dashboards, WhatsApp and API integrations, and data tooling that turn scattered information into decisions your team can act on.</p>
-        </article>
-        <article class="svc">
-          <span class="svc__n">04</span>
-          <h3 class="svc__title">Technical advisory</h3>
-          <p class="svc__desc">Architecture review, system audits, and consulting retainers — a senior pair of hands to de-risk the decisions before they get expensive.</p>
-        </article>
-      </div>
-
-      <!-- Low-friction "start small" entry point -->
-      <div class="starter reveal">
-        <div>
-          <span class="starter__tag"><span class="statusbar__dot" aria-hidden="true"></span>Start small</span>
-          <h3 class="starter__title">Not ready for a full build? Test the relationship first.</h3>
-          <p class="starter__desc">Begin with a paid discovery sprint or a fixed-scope pilot — a system audit or a small, real deliverable — so you can see exactly how we work together before committing to anything larger. The lowest-risk way to start, especially remotely.</p>
-          <div style="margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:0.8rem;">
-            <a href="contact.html" class="btn">Book a discovery sprint <span class="arr">→</span></a>
-            <a href="services.html#start-small" class="btn btn--ghost">How it works <span class="arr">→</span></a>
-          </div>
-        </div>
-        <ul class="starter__list" aria-label="What a starter engagement can be">
-          <li>A focused system or architecture audit</li>
-          <li>A scoped pilot of one real workflow</li>
-          <li>A fixed price, a fixed timeline</li>
-          <li>A clear path to the full build — or not</li>
-        </ul>
-      </div>
-
-      <div class="engagements">
-        <span class="dim" style="font-family:var(--mono); font-size:var(--fs-micro); letter-spacing:0.12em; text-transform:uppercase;">Engagement models</span>
-        <span class="tag">Project-based</span>
-        <span class="tag">Monthly retainer</span>
-        <span class="tag">Technical advisory</span>
-        <a href="services.html" class="tlink" style="margin-left:auto">See services &amp; engagement models <span class="arr">→</span></a>
-      </div>
-    </section>
-
-    <!-- ===================== PROOF BAND (real facts only) ===================== -->
-    <section class="proof" aria-label="Credibility">
-      <div class="wrap proof__inner">
-        <p class="proof__lead reveal">Built for teams whose<br />software <em>can't go down.</em></p>
-        <dl class="proof__facts reveal">
-          <div class="proof__fact"><dt>Academic partner</dt><dd><b>Strathmore University</b> — TechGetAfrica</dd></div>
-          <div class="proof__fact"><dt>Sectors served</dt><dd>Logistics, transport &amp; field-services</dd></div>
-          <div class="proof__fact"><dt>In production on</dt><dd>Traccar · Appwrite · NocoDB · Azure</dd></div>
-          <div class="proof__fact"><dt>Reach</dt><dd>East Africa, delivered <b>remotely worldwide</b></dd></div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- ===================== 03 · ABOUT (teaser) ===================== -->
-    <section class="section wrap" id="about" aria-labelledby="about-title">
+    <!-- ===================== INTRO ===================== -->
+    <section class="section wrap" aria-labelledby="about-title">
       <span class="eyebrow"><b>03</b> — About</span>
-      <div class="about__grid" style="margin-top:1.5rem">
+
+      <div class="aboutintro__grid">
         <div>
-          <p class="about__statement" id="about-title">Six years building software that operations teams <em>depend on every day.</em></p>
-          <div class="about__body">
-            <p>I work end-to-end — from understanding your operational problem through architecture, build, and handoff. I'm comfortable talking to procurement, engineering teams, and end users in the same week.</p>
+          <h1 class="aboutintro__statement" id="about-title">Six years building software that operations teams <em>depend on every day.</em></h1>
+          <div class="aboutintro__body">
+            <p>I've spent six years building software that operations teams depend on every day — fleet dispatch systems, real-time GPS tracking platforms, field-worker safety dashboards, and enterprise ERPs.</p>
+            <p>I work end-to-end: from understanding your operational problem through to architecture, build, and handoff. I'm comfortable talking to procurement, engineering teams, and end users in the same week.</p>
             <p>Based in Nairobi, I've shipped production systems for clients across East Africa and work remotely with international organisations that need reliable software built without unnecessary overhead.</p>
-          </div>
-          <div class="about__foot">
-            <a href="about.html" class="tlink">More about how I work <span class="arr">→</span></a>
           </div>
         </div>
 
@@ -756,11 +612,158 @@
       </div>
     </section>
 
-    <!-- ===================== 04 · START A PROJECT (closing CTA) ===================== -->
+    <!-- ===================== HOW I WORK ===================== -->
+    <section class="section wrap" aria-labelledby="how-title">
+      <div class="detail__head">
+        <div class="sec-head" style="margin-bottom:0">
+          <span class="eyebrow">How I work</span>
+          <h2 class="sec-title" id="how-title">Senior hands,<br /><em>no overhead.</em></h2>
+        </div>
+        <p class="lede" style="margin-top:0; align-self:flex-end;">The way I work is the product as much as the software — predictable, owned end-to-end, and built to keep running after I hand it over.</p>
+      </div>
+
+      <div class="feature-list">
+        <article class="feature reveal">
+          <span class="feature__n">01</span>
+          <h3 class="feature__title">End-to-end ownership</h3>
+          <p class="feature__desc">One person accountable from the operational problem through architecture, build, and handoff — so nothing falls between a designer, a contractor, and a vendor. You get a working system, not a pile of tickets.</p>
+        </article>
+        <article class="feature reveal">
+          <span class="feature__n">02</span>
+          <h3 class="feature__title">Fluent across the room</h3>
+          <p class="feature__desc">Comfortable talking to procurement, engineering teams, and the end users who live in the system every day — often in the same week. Decisions get made faster when one person speaks all three languages.</p>
+        </article>
+        <article class="feature reveal">
+          <span class="feature__n">03</span>
+          <h3 class="feature__title">Reliability-first</h3>
+          <p class="feature__desc">I build for the teams whose software can't go down — dispatch, tracking, safety. That means proven infrastructure, sensible defaults, and systems that behave the same on a bad day as a good one.</p>
+        </article>
+        <article class="feature reveal">
+          <span class="feature__n">04</span>
+          <h3 class="feature__title">Built without unnecessary overhead</h3>
+          <p class="feature__desc">No bloated teams, no rebuilds for their own sake. The right tools for your operation, a clear scope, and a system your team can afford to run and actually owns at the end.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== NAIROBI → WORLDWIDE ===================== -->
+    <section class="geo" aria-labelledby="geo-title">
+      <div class="wrap geo__inner">
+        <p class="geo__lead reveal" id="geo-title">Nairobi &rarr; Worldwide.<br />Independent and remote <em>since 2019.</em></p>
+        <dl class="geo__facts reveal">
+          <div class="geo__fact"><dt>Based in</dt><dd>Nairobi, Kenya — <span class="geo__clock"><strong id="nairobiTime">--:--</strong> EAT (UTC+3)</span></dd></div>
+          <div class="geo__fact"><dt>Working style</dt><dd>Remote-first, <b>comfortable across time zones</b></dd></div>
+          <div class="geo__fact"><dt>Delivered for</dt><dd>Clients across <b>East Africa</b></dd></div>
+          <div class="geo__fact"><dt>Also working with</dt><dd>International organisations, worldwide</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===================== SELECTED MILESTONES ===================== -->
+    <section class="section wrap" aria-labelledby="ms-title">
+      <div class="sec-head">
+        <span class="eyebrow">Experience</span>
+        <h2 class="sec-title" id="ms-title">Selected<br /><em>milestones</em></h2>
+        <p class="lede">A short, honest timeline — the real engagements behind the systems running in production today.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="tl reveal">
+          <span class="tl__year">2019</span>
+          <div>
+            <h3 class="tl__title">Went independent</h3>
+            <p class="tl__desc">Began consulting remotely — the start of building operational software directly for the teams that depend on it, without the overhead of a larger shop.</p>
+          </div>
+          <span class="tl__tag">Independent</span>
+        </div>
+
+        <div class="tl reveal">
+          <span class="tl__year">2022 — now</span>
+          <div>
+            <h3 class="tl__title">Founded TechGetAfrica</h3>
+            <p class="tl__desc">An EdTech and cloud platform serving learners across East Africa — a Moodle LMS, booking system, and an infrastructure stack on Azure and a self-hosted homelab. Ongoing, now in partnership with Strathmore University.</p>
+          </div>
+          <span class="tl__tag">EdTech · Cloud</span>
+        </div>
+
+        <div class="tl reveal">
+          <span class="tl__year">2024</span>
+          <div>
+            <h3 class="tl__title">Built TKGM field-worker safety &amp; dispatch dashboard</h3>
+            <p class="tl__desc">A command-centre dashboard for field-worker safety — real-time location awareness, dispatch coordination, and incident reporting, built as a white-label product for operations teams.</p>
+          </div>
+          <span class="tl__tag">Dispatch · Safety</span>
+        </div>
+
+        <div class="tl reveal">
+          <span class="tl__year">2024 — 25</span>
+          <div>
+            <h3 class="tl__title">Built LA-ERP fleet &amp; vehicle-management system</h3>
+            <p class="tl__desc">A production fleet ERP for a logistics operator — trips, drivers, fuel, inspections, maintenance, and live GPS via Traccar — replacing manual spreadsheets with full operational visibility across the fleet.</p>
+          </div>
+          <span class="tl__tag">Fleet · GPS</span>
+        </div>
+      </div>
+
+      <p class="tl__note">Further engagements and references are available on request. <a href="work.html" class="tlink">See the full case studies <span class="arr">→</span></a></p>
+    </section>
+
+    <!-- ===================== TECH STACK ===================== -->
+    <section class="section wrap" aria-labelledby="stack-title">
+      <div class="sec-head">
+        <span class="eyebrow">Tooling</span>
+        <h2 class="sec-title" id="stack-title">The stack<br />I build on</h2>
+        <p class="lede">Proven, boring-in-the-good-way infrastructure — chosen because operations teams can rely on it, not because it's new.</p>
+      </div>
+
+      <div class="stack">
+        <article class="stack__group reveal">
+          <div class="stack__label"><span class="stack__n">01</span><h3 class="stack__title">Operational platforms</h3></div>
+          <div class="stack__chips">
+            <span class="tag">Traccar (GPS)</span>
+            <span class="tag">Real-time maps</span>
+            <span class="tag">Fleet &amp; dispatch</span>
+            <span class="tag">Field-ops dashboards</span>
+          </div>
+        </article>
+
+        <article class="stack__group reveal">
+          <div class="stack__label"><span class="stack__n">02</span><h3 class="stack__title">Build &amp; data</h3></div>
+          <div class="stack__chips">
+            <span class="tag">Appwrite</span>
+            <span class="tag">NocoDB</span>
+            <span class="tag">Moodle</span>
+            <span class="tag">Enterprise web platforms</span>
+            <span class="tag">Enterprise APIs</span>
+          </div>
+        </article>
+
+        <article class="stack__group reveal">
+          <div class="stack__label"><span class="stack__n">03</span><h3 class="stack__title">Infrastructure &amp; ops</h3></div>
+          <div class="stack__chips">
+            <span class="tag">Azure</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Traefik</span>
+            <span class="tag">Cloudflare</span>
+            <span class="tag">Self-hosted homelab</span>
+          </div>
+        </article>
+
+        <article class="stack__group reveal">
+          <div class="stack__label"><span class="stack__n">04</span><h3 class="stack__title">Integrations</h3></div>
+          <div class="stack__chips">
+            <span class="tag">WhatsApp Business API</span>
+            <span class="tag">Real-time dashboards</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== CLOSING CTA ===================== -->
     <section class="section wrap cta" id="contact" aria-labelledby="cta-title">
       <span class="eyebrow"><b>04</b> — Start a Project</span>
-      <h2 class="cta__title" id="cta-title" style="margin-top:1rem">Have an operation that runs on <em>software?</em></h2>
-      <p class="lede">Tell me what your team is trying to do. We'll scope it on a short call — no obligation, and pricing comes once we both understand the work.</p>
+      <h2 class="cta__title" id="cta-title" style="margin-top:1rem">Think we'd <em>work well</em> together?</h2>
+      <p class="lede">Tell me what your team is trying to do. We'll scope it on a short call — no obligation, and the engagement type follows once we both understand the work.</p>
 
       <div class="cta__row">
         <a href="contact.html" class="btn">Start a project <span class="arr">→</span></a>
